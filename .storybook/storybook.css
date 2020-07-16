@@ -1,0 +1,19 @@
+.StorybookProvider {
+    padding: 4.2rem;
+}
+
+#story-root {
+    padding-top: 4.2rem;
+}
+
+#story-root + div {
+    background-color: #f7f7f7;
+    border-color: #a7a7a7;
+    border-style: double;
+    margin-top: 6rem;
+    padding: 1rem;
+}
+
+#story-root + div h1 {
+    margin-top: 0.5rem !important;
+}

@@ -1,0 +1,11 @@
+import { render, screen } from "@testing-library/react";
+import React from "react";
+
+import {{name}} from "./{{name}}";
+
+// TODO: add proper tests for {{name}} component
+test("{{name}} renders properly", () => {
+render(
+<{{name}} />);
+expect(screen.getByText("{{name}}")).toBeInTheDocument();
+});
