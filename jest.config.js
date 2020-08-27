@@ -9,10 +9,13 @@ const config = {
     transform: {
         "^.+\\.tsx?$": "ts-jest",
         "^.+\\.svg$": "<rootDir>/src/test-utils/svgTransform.js",
+        "^.+\\.mdx$": "@storybook/addon-docs/jest-transform-mdx",
     },
     moduleDirectories: ["<rootDir>/src", "node_modules"],
     moduleNameMapper: {
         "\\.css$": "identity-obj-proxy",
+        "^components(.*)$": "<rootDir>/src/components$1",
+        // Add aliases here ---> "^alias(.*)$": "<rootDir>/src/alias-path$1", <---
     },
 };
 

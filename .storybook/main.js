@@ -2,44 +2,44 @@ const path = require("path");
 const custom = require("../webpack.common.js");
 const webpack = require("webpack");
 
+const webpackResolve = {
+    alias: {
+        "^components(.*)$": "../src/components$1",
+        // Add aliases here if needed -->  `alias: path.resolve(__dirname, "../src/alias-path"),`
+    },
+    extensions: [".tsx", ".ts", ".js", ".jsx", ".svg", ".css", ".json", ".mdx"],
+};
+
 module.exports = {
-    stories: ["../src/**/*.story.tsx"],
+    stories: ["../src/**/*.story.@(tsx|mdx)"],
     addons: [
-        "@storybook/addon-actions/register",
         {
-            name: "@storybook/addon-docs/preset",
+            name: "@storybook/addon-docs",
             options: {
                 configureJSX: true,
                 babelOptions: {},
+                sourceLoaderOptions: null,
             },
         },
-        //TODO: Update setup once Storybook 6.0 is released, it will support prop types table + code for TS OOTB
-        // https://github.com/storybookjs/storybook/issues/9311
-        {
-            name: "@storybook/preset-typescript",
-            options: {
-                tsLoaderOptions: {
-                    transpileOnly: true,
-                    confiıgFile: path.resolve(__dirname, "../tsconfig.json"),
-                },
-            },
-        },
+        "@storybook/addon-controls",
+        "@storybook/addon-actions",
     ],
     webpackFinal: async config => {
         config.module.rules.push({
-            test: /\.(ts|tsx)$/,
-            use: [
-                {
-                    loader: require.resolve("@storybook/source-loader"),
-                },
-            ],
+            test: /\.(stories|story)\.[tj]sx?$/,
+            loader: require.resolve("@storybook/source-loader"),
+            exclude: [/node_modules/],
+            enforce: "pre",
         });
 
         config.stats = {
             modules: false,
             warnings: false,
         };
+
         config.devServer = { stats: "errors-only" };
+
+        config.resolve = webpackResolve;
 
         return { ...custom.config, ...config };
     },

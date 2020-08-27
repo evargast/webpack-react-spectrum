@@ -1,12 +1,10 @@
-import "./storybook.css";
-
 import { addDecorator, addParameters } from "@storybook/react";
 
-import { defaultTheme, Provider } from "@adobe/react-spectrum";
+import { Provider } from "@adobe/react-spectrum";
 import React from "react";
 import { configureActions } from "@storybook/addon-actions";
-import { DocsPage, DocsContainer } from "@storybook/addon-docs/blocks";
 import { create } from "@storybook/theming";
+import SpectrumWhiteTheme from "spectrum-white-theme";
 
 configureActions({
     depth: 1,
@@ -19,12 +17,16 @@ addParameters({
             brandUrl: "https://github.com/evargast/webpack-react-spectrum",
         }),
     },
-    docs: {
-        container: DocsContainer,
-        page: DocsPage,
-    },
+});
+
+addParameters({
+    viewMode: "story",
 });
 
 addDecorator(storyFn => {
-    return <Provider theme={defaultTheme}>{storyFn()}</Provider>;
+    return (
+        <Provider theme={SpectrumWhiteTheme} colorScheme={"light"}>
+            {storyFn()}
+        </Provider>
+    );
 });

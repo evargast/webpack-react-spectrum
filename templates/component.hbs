@@ -1,11 +1,23 @@
+import {Button} from "@adobe/react-spectrum";
 import React, { FC } from "react";
 
-const {{name}}: FC = () => {
-return (
-<div>
-    <p>{{name}}</p>
-</div>
-);
-};
+interface Props {
+text?: string;
+disabled?: boolean;
+onClick?: VoidFunction;
+}
 
-export default {{name}};
+const {{name}}: FC<Props> = ({
+    onClick,
+    text = "Welcome to Adobe Spectrum !",
+    disabled = false,
+    }) => {
+    return (
+    <div onClick={onClick}>
+        <Button variant="cta" disabled={disabled}>
+            {text}
+        </Button>
+    </div>
+    );
+    };
+    export default {{name}};
