@@ -43,9 +43,13 @@ more information.
 
 This will start the [storybook](https://storybook.js.org/) server listening on port 6006. Using storybook to build components is encouraged as it offers more flexibility in the states you start your components with, enforces isolation between components, and makes a more testable set of components.
 
-### `npm run generate`   ||   `npm run g`
+### `npm run generate` || `npm run g`
 
-Leverages [Plop](https://www.npmjs.com/package/plop) to generate a new component, in addition to generating a new component it will create a `.test.tsx`, `.story.tsx` and `index.tsx`. Using this command is encouraged to enforce best development practices by always creating tests and stories for each component.
+Leverages [Plop](https://www.npmjs.com/package/plop) to generate a new component, in addition to generating a new component it will create a `.test.tsx`, `.story.tsx`, `story.mdx`, `.css` and `index.tsx`. Using this command is encouraged to enforce best development practices by always creating tests and stories for each component.
+
+**Note:** not both of the `.story.(mdx | tsx)` files are required. They are both included for your convenience but you can safely remove whichever you don't want to maintain.
+
+To remove it from the `npm run generate` command, delete the desired file from the `templates` folder and remove the corresponding block from the `plopfile.js` file.
 
 ---
 
@@ -57,9 +61,13 @@ Leverages [Plop](https://www.npmjs.com/package/plop) to generate a new component
 
 ### Stories  📚
 
-Stories are added to each components folder with the file extension `.story.ts` or `.story.tsx`
+This repo supports `.story.mdx` and `.story.tsx` stories!
 
-### Styling (recommended)  🎨
+-   `MDX` stories allow you to create documentation for your component while also generating individual stories for each of the component's states that are mentioned within the documentation!
+
+-   `TSX` stories allows you to create stories for different states of your component but no documentation for it.
+
+### Styling 🎨
 
 -   Ideally use Spectrum components for layouts if that's not possible, use [flex](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) or [grid](https://css-tricks.com/snippets/css/complete-guide-grid/) for layout.
 

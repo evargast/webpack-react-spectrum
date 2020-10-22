@@ -1,4 +1,3 @@
-import { action } from "@storybook/addon-actions";
 import { Canvas, Meta, Story } from "@storybook/addon-docs/blocks";
 
 import App from "./App";
@@ -22,24 +21,5 @@ for more info!
 export const ComponentStory = props => <App {...props} />;
 
 <Canvas>
-    <Story
-        name="Enabled"
-        args={{
-            text: "Hello",
-            disabled: false,
-            onClick: action("Button clicked!"),
-        }}
-        argTypes={{ disabled: { control: { type: "boolean" } } }}
-    >
-        {ComponentStory.bind({})}
-    </Story>
-    <Story
-        name="Disabled"
-        args={{
-            text: "World",
-            disabled: true,
-        }}
-    >
-        {ComponentStory.bind({})}
-    </Story>
+    <Story name="Welcome">{ComponentStory.bind({})}</Story>
 </Canvas>
