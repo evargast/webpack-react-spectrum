@@ -27,7 +27,7 @@ const componentGenerator = {
         {
             type: "pretty-add",
             path: "src/components/{{name}}/{{name}}.story.tsx",
-            templateFile: "templates/story.hbs",
+            templateFile: "templates/tsx-story.hbs",
         },
 
         {

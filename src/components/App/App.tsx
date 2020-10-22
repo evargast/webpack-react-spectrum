@@ -1,7 +1,6 @@
-import { Button, Provider } from "@adobe/react-spectrum";
+import { Button, lightTheme, Provider } from "@adobe/react-spectrum";
 import * as React from "react";
 import { FC } from "react";
-import SpectrumWhiteTheme from "spectrum-white-theme";
 
 interface AppProps {
     text?: string;
@@ -15,7 +14,7 @@ const App: FC<AppProps> = ({
     disabled = false,
 }) => {
     return (
-        <Provider theme={SpectrumWhiteTheme} colorScheme="light">
+        <Provider theme={lightTheme} colorScheme="light">
             <Button variant="cta" isDisabled={disabled} onPress={onClick}>
                 {text}
             </Button>
