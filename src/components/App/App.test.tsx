@@ -4,11 +4,11 @@ import React from "react";
 import App from "./App";
 
 const text = {
-    sample: "Welcome to Adobe Spectrum !",
+    sample: "Welcome to React Spectrum!",
 };
 
 // TODO: add proper tests for App component
 test("App renders properly", () => {
-    render(<App text={text.sample} />);
+    render(<App />);
     expect(screen.getByText(text.sample)).toBeInTheDocument();
 });
