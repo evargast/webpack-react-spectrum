@@ -1,0 +1,48 @@
+/**
+ *  Component Story Format (CSF) is now encouraged.
+ *  More info here: https://storybook.js.org/docs/react/api/csf
+ *  --
+ *  You don't need to include both story formats (mdx / tsx)
+ *  they are both included for your convenience.
+ *  --
+ */
+import { action } from "@storybook/addon-actions";
+import { Story } from "@storybook/react";
+import React, { ComponentProps, ReactElement } from "react";
+
+import {{name}} from "./{{name}}";
+
+export default {
+    title: "TSX/{{name}}",
+    component: {{name}},
+    argTypes: {
+        onClick: {
+            control: {
+                type: "object",
+            },
+        },
+    },
+};
+
+const {{name}}Story: Story = (
+    args: ComponentProps<typeof {{name}}>,
+): ReactElement => {
+    // Shared props may be passed here
+    return <{{name}} {...args} onClick={action("Button clicked!")} />;
+};
+
+// Story specific props are passed here
+const Enabled = {{name}}Story.bind({});
+
+Enabled.args = {
+    text: "Hello",
+    disabled: false,
+};
+
+const Disabled = {{name}}Story.bind({});
+Disabled.args = {
+    text: "World",
+    disabled: true,
+};
+
+export { Enabled, Disabled };
