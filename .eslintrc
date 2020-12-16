@@ -38,7 +38,7 @@
         "no-console": ["error"],
         "react/prop-types": 0,
         "@typescript-eslint/default-param-last": ["error"],
-        "simple-import-sort/sort": [
+        "simple-import-sort/imports": [
             "error",
             {
                 "groups": [
