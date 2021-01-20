@@ -1,4 +1,4 @@
-import {Button} from "@adobe/react-spectrum";
+import { Button } from "@adobe/react-spectrum";
 import React, { FC } from "react";
 
 interface Props {
@@ -14,7 +14,7 @@ const {{name}}: FC<Props> = ({
     }) => {
     return (
     <div onClick={onClick}>
-        <Button variant="cta" disabled={disabled}>
+        <Button variant="cta" isDisabled={disabled}>
             {text}
         </Button>
     </div>
