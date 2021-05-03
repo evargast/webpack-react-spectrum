@@ -17,7 +17,7 @@ module.exports = {
             name: "@storybook/addon-docs",
             options: {
                 configureJSX: true,
-                babelOptions: {},
+                babelOptions: { loose: true },
                 sourceLoaderOptions: null,
             },
         },

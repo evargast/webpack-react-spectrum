@@ -29,12 +29,6 @@ const componentGenerator = {
             path: "src/components/{{name}}/{{name}}.story.tsx",
             templateFile: "templates/tsx-story.hbs",
         },
-
-        {
-            type: "add",
-            path: "src/components/{{name}}/{{name}}.story.mdx",
-            templateFile: "templates/mdx-story.hbs",
-        },
     ],
 };
 
