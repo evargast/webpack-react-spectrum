@@ -71,13 +71,6 @@
             "rules": {
                 "@typescript-eslint/no-var-requires": "off"
             }
-        },
-        {
-            "files": ["*.mdx"],
-            "extends": ["plugin:mdx/recommended", "plugin:mdx/overrides"],
-            "rules": {
-                "@typescript-eslint/explicit-module-boundary-types": "off"
-            }
         }
     ]
 }

@@ -45,11 +45,7 @@ This will start the [storybook](https://storybook.js.org/) server listening on p
 
 ### `npm run generate` || `npm run g`
 
-Leverages [Plop](https://www.npmjs.com/package/plop) to generate a new component, in addition to generating a new component it will create a `.test.tsx`, `.story.tsx`, `story.mdx`, `.css` and `index.tsx`. Using this command is encouraged to enforce best development practices by always creating tests and stories for each component.
-
-**Note:** not both of the `.story.(mdx | tsx)` files are required. They are both included for your convenience but you can safely remove whichever you don't want to maintain.
-
-To remove it from the `npm run generate` command, delete the desired file from the `templates` folder and remove the corresponding block from the `plopfile.js` file.
+Leverages [Plop](https://www.npmjs.com/package/plop) to generate a new component, in addition to generating a new component it will create a `.test.tsx`, `.story.tsx` and `index.tsx`. Using this command is encouraged to enforce best development practices by always creating tests and stories for each component.
 
 ---
 
@@ -61,11 +57,9 @@ To remove it from the `npm run generate` command, delete the desired file from t
 
 ### Stories  📚
 
-This repo supports `.story.mdx` and `.story.tsx` stories!
+This repo supports `.story.tsx` stories!
 
--   `MDX` stories allow you to create documentation for your component while also generating individual stories for each of the component's states that are mentioned within the documentation!
-
--   `TSX` stories allows you to create stories for different states of your component but no documentation for it.
+-   `TSX` stories allows you to create stories for different states of your component.
 
 ### Styling 🎨
 

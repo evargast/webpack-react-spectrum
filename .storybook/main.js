@@ -7,11 +7,11 @@ const webpackResolve = {
         "^components(.*)$": "../src/components$1",
         // Add aliases here if needed -->  `alias: path.resolve(__dirname, "../src/alias-path"),`
     },
-    extensions: [".tsx", ".ts", ".js", ".jsx", ".svg", ".css", ".json", ".mdx"],
+    extensions: [".tsx", ".ts", ".js", ".jsx", ".svg", ".css", ".json"],
 };
 
 module.exports = {
-    stories: ["../src/**/*.story.@(tsx|mdx)"],
+    stories: ["../src/**/*.story.tsx"],
     addons: [
         {
             name: "@storybook/addon-docs",

@@ -3,8 +3,8 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
-const createStyledComponentsTransformer = require("typescript-plugin-styled-components")
-    .default;
+const createStyledComponentsTransformer =
+    require("typescript-plugin-styled-components").default;
 const styledComponentsTransformer = createStyledComponentsTransformer();
 
 module.exports = {
@@ -21,16 +21,7 @@ module.exports = {
             components: path.resolve(__dirname, "src/components"),
             // Add aliases here if needed -->  `alias: path.resolve(__dirname, "src/alias-path"),`
         },
-        extensions: [
-            ".tsx",
-            ".ts",
-            ".js",
-            ".jsx",
-            ".svg",
-            ".css",
-            ".json",
-            ".mdx",
-        ],
+        extensions: [".tsx", ".ts", ".js", ".jsx", ".svg", ".css", ".json"],
     },
     module: {
         rules: [
@@ -56,11 +47,6 @@ module.exports = {
             {
                 test: /\.(png|jpg|gif|jpeg|ttf)$/,
                 use: ["file-loader"],
-            },
-            {
-                test: /\.mdx?$/,
-                use: ["babel-loader", "@mdx-js/loader"],
-                exclude: /node_modules/,
             },
         ],
     },
