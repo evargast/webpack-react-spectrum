@@ -24,6 +24,15 @@ module.exports = {
         "@storybook/addon-controls",
         "@storybook/addon-actions",
     ],
+    typescript: {
+        reactDocgen: "react-docgen-typescript",
+        reactDocgenTypescriptOptions: {
+            compilerOptions: {
+                allowSyntheticDefaultImports: false,
+                esModuleInterop: false,
+            },
+        },
+    },
     webpackFinal: async config => {
         config.module.rules.push({
             test: /\.(stories|story)\.[tj]sx?$/,
