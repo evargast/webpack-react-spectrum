@@ -1,5 +1,7 @@
 ## Purpose
 
+[![Node.js CI status](https://github.com/evargast/webpack-react-spectrum/workflows/Node.js%20CI/badge.svg)](https://github.com/evargast/webpack-react-spectrum/actions)
+
 The purpose of this project is to provide a dev-ready starting point for modern React apps that utilize the [React Spectrum design system](https://spectrum.adobe.com/).
 
 It includes support for [Hot Module Replacement](https://webpack.js.org/concepts/hot-module-replacement/) within the Webpack DevServer.
