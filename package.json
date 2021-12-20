@@ -12,6 +12,7 @@
         "format": "prettier --check \"./**/*.{ts,tsx,js,css,json,md}\"",
         "format:fix": "prettier --write  \"./**/*.{ts,tsx,js,css,json,md}\"",
         "test": "jest --color --watch",
+        "test:ci": "jest --color --ci",
         "storybook": "start-storybook -p 6006 --quiet",
         "build-storybook": "build-storybook --output-dir storybook",
         "deploy-storybook": "storybook-to-ghpages --ci --out=storybook",
