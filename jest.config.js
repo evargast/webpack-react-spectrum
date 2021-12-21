@@ -6,6 +6,7 @@ const config = {
         "@testing-library/jest-dom/extend-expect",
         "jest-styled-components",
     ],
+    coverageReporters: ["text", "html", "cobertura"],
     transform: {
         "^.+\\.tsx?$": "ts-jest",
         "^.+\\.svg$": "<rootDir>/src/test-utils/svgTransform.js",
