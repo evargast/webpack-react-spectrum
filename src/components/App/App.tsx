@@ -36,7 +36,7 @@ const App: FC = () => {
     return (
         <ProviderV3 theme={lightTheme} colorScheme={"light"}>
             <View paddingTop="size-400">
-                <h1 className="App">Welcome to React Spectrum!</h1>
+                <h1 className="app">Welcome to React Spectrum!</h1>
             </View>
 
             <Grid
