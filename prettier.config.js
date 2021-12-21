@@ -6,7 +6,6 @@ const config = {
     quoteProps: "consistent",
     jsxSingleQuote: false,
     trailingComma: "all",
-    jsxBracketSameLine: false,
     arrowParens: "avoid",
     endOfLine: "lf",
 };
