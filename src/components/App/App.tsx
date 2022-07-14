@@ -49,7 +49,7 @@ const App: FC = () => {
                 marginBottom="size-400"
             >
                 {colors.map(color => (
-                    <View key={color} backgroundColor={color} />
+                    <View key={color?.toString()} backgroundColor={color} />
                 ))}
             </Grid>
         </ProviderV3>
