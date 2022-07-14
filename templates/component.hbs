@@ -2,22 +2,23 @@ import { Button } from "@adobe/react-spectrum";
 import React, { FC } from "react";
 
 interface Props {
-text?: string;
-disabled?: boolean;
-onClick?: VoidFunction;
+    text?: string;
+    disabled?: boolean;
+    onClick?: VoidFunction;
 }
 
 const {{name}}: FC<Props> = ({
     onClick,
     text = "Welcome to Adobe Spectrum !",
     disabled = false,
-    }) => {
+}) => {
     return (
-    <div onClick={onClick}>
-        <Button variant="cta" isDisabled={disabled}>
-            {text}
-        </Button>
-    </div>
+        <div onClick={onClick}>
+            <Button variant="cta" isDisabled={disabled}>
+                {text}
+            </Button>
+        </div>
     );
-    };
-    export default {{name}};
+};
+
+export { {{name}} };

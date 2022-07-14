@@ -65,16 +65,12 @@ module.exports = {
     ],
     devServer: {
         port: 1234,
-        stats: "errors-only",
         hot: true,
-        writeToDisk: true,
     },
 
     performance: {
         hints: false,
     },
-    stats: {
-        modules: false,
-        warnings: false,
-    },
+
+    stats: "minimal",
 };

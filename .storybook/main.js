@@ -1,6 +1,4 @@
-const path = require("path");
 const custom = require("../webpack.common.js");
-const webpack = require("webpack");
 
 const webpackResolve = {
     alias: {
@@ -11,6 +9,9 @@ const webpackResolve = {
 };
 
 module.exports = {
+    core: {
+        builder: "webpack5",
+    },
     stories: ["../src/**/*.story.tsx"],
     addons: [
         {
@@ -40,13 +41,6 @@ module.exports = {
             exclude: [/node_modules/],
             enforce: "pre",
         });
-
-        config.stats = {
-            modules: false,
-            warnings: false,
-        };
-
-        config.devServer = { stats: "errors-only" };
 
         config.resolve = webpackResolve;
 
