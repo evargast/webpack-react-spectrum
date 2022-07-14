@@ -1,7 +1,7 @@
 import {
     Grid,
     lightTheme,
-    Provider as ProviderV3,
+    Provider,
     repeat,
     View,
 } from "@adobe/react-spectrum";
@@ -34,7 +34,7 @@ const App: FC = () => {
     }
 
     return (
-        <ProviderV3 theme={lightTheme} colorScheme={"light"}>
+        <Provider theme={lightTheme} colorScheme={"light"}>
             <View paddingTop="size-400">
                 <h1 className="App">Welcome to React Spectrum!</h1>
             </View>
@@ -52,7 +52,7 @@ const App: FC = () => {
                     <View key={color?.toString()} backgroundColor={color} />
                 ))}
             </Grid>
-        </ProviderV3>
+        </Provider>
     );
 };
 
