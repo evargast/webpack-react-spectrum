@@ -13,7 +13,7 @@ module.exports = () => {
         target: "web",
         mode: "development",
         output: {
-            filename: "[name].[hash].bundle.js",
+            filename: "[name].[contenthash].bundle.js",
             path: path.resolve(__dirname, "dist"),
         },
         resolve: {
