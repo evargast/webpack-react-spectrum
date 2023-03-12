@@ -26,8 +26,7 @@ const App: FC = () => {
         "blue",
     ];
 
-    // type BackgroundColor = ComponentProps<typeof View>["backgroundColor"];
-    const colors: BackgroundColor["5"][] = [];
+    const colors: Array<BackgroundColor["5"]> = [];
     for (const color of baseColors) {
         for (let i = 4; i <= 7; i++) {
             colors.push(`${color}-${i}00` as BackgroundColor["5"]);
