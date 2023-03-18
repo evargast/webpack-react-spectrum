@@ -1,10 +1,4 @@
-import {
-    Grid,
-    lightTheme,
-    Provider as ProviderV3,
-    repeat,
-    View,
-} from "@adobe/react-spectrum";
+import { Grid, lightTheme, Provider as ProviderV3, repeat, View } from "@adobe/react-spectrum";
 import { BackgroundColor } from "@react-types/shared";
 import React, { FC } from "react";
 
@@ -26,7 +20,6 @@ const App: FC = () => {
         "blue",
     ];
 
-    // type BackgroundColor = ComponentProps<typeof View>["backgroundColor"];
     const colors: BackgroundColor["5"][] = [];
     for (const color of baseColors) {
         for (let i = 4; i <= 7; i++) {
@@ -50,15 +43,11 @@ const App: FC = () => {
                 marginBottom="size-400"
             >
                 {colors.map(color => (
-                    <View
-                        colorVersion={5}
-                        key={color?.toString()}
-                        backgroundColor={color}
-                    />
+                    <View colorVersion={5} key={color?.toString()} backgroundColor={color} />
                 ))}
             </Grid>
         </ProviderV3>
     );
 };
 
-export default App;
+export { App };

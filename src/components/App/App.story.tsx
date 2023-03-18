@@ -6,10 +6,10 @@
 import { Story } from "@storybook/react";
 import React, { ComponentProps, ReactElement } from "react";
 
-import App from "./App";
+import { App } from "./App";
 
 export default {
-    title: "TSX/App",
+    title: "App",
     component: App,
 };
 

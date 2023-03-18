@@ -4,13 +4,13 @@
  */
  
 import { action } from "@storybook/addon-actions";
-import { Story } from "@storybook/react";
+import { ComponentStory } from '@storybook/react';
 import React, { ComponentProps, ReactElement } from "react";
 
-import {{name}} from "./{{name}}";
+import { {{name}} } from "./{{name}}";
 
 export default {
-    title: "TSX/{{name}}",
+    title: "{{name}}",
     component: {{name}},
     argTypes: {
         onClick: {
@@ -21,8 +21,8 @@ export default {
     },
 };
 
-const {{name}}Story: Story = (
-    args: ComponentProps<typeof {{name}}>,
+const {{name}}Story: ComponentStory<typeof {{name}}> = (
+    args,
 ): ReactElement => {
     // Shared props may be passed here
     return <{{name}} {...args} onClick={action("Button clicked!")} />;

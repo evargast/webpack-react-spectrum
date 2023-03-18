@@ -15,24 +15,10 @@
     "env": {
         "node": true,
         "browser": true,
-        "es6": true,
-        "jest/globals": true
+        "es6": true
     },
-    "extends": [
-        "eslint:recommended",
-        "prettier/@typescript-eslint",
-        "plugin:jest/recommended",
-        "plugin:react/recommended",
-        "plugin:@typescript-eslint/recommended",
-        "plugin:@typescript-eslint/eslint-recommended"
-    ],
-    "plugins": [
-        "jest",
-        "prettier",
-        "jsx-a11y",
-        "simple-import-sort",
-        "@typescript-eslint/eslint-plugin"
-    ],
+    "extends": ["plugin:@typescript-eslint/eslint-recommended"],
+    "plugins": ["prettier", "simple-import-sort", "@typescript-eslint"],
 
     "rules": {
         "no-console": ["error"],
@@ -62,8 +48,7 @@
                 "vars": "local",
                 "varsIgnorePattern": ""
             }
-        ],
-        "jsx-a11y/no-autofocus": 2
+        ]
     },
     "overrides": [
         {

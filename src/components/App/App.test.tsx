@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen } from "test-utils";
 
-import App from "./App";
+import { App } from "./App";
 
 const text = {
     sample: "Welcome to React Spectrum!",

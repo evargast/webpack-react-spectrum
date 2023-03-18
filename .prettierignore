@@ -11,3 +11,5 @@ coverage
 
 # misc
 .env
+
+*.hbs
